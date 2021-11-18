@@ -9,7 +9,7 @@ function errorHandler(err, req, res, next) {
         return res.status(401).json({message: err})
     }
 
-    // default to 500 server error
+    // default to 500 server error if no other error type is specified
     return res.status(500).json(err);
 }
 
